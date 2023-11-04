@@ -1191,7 +1191,7 @@ def connect(classname, className_b, subscription, inpt, allowImages, b_botrole, 
                     
             print("Prompt", given_prompt)
             generated_text = openai.ChatCompletion.create(                                 
-                model="gpt-3.5-turbo" if subscription == 0 else "gpt-4",
+                model="gpt-3.5-turbo" if subscription == 0 else "gpt-3.5-turbo", # gpt-4 daalna
                 messages=[
                     {"role": "system", "content": given_prompt},
                     *chatsToSend,
@@ -1306,7 +1306,7 @@ def connect_api(classname, className_b, subscription, inpt, allowImages, b_botro
         else:
             print("Prompt", given_prompt)
             generated_text = openai.ChatCompletion.create(                                 
-                model="gpt-3.5-turbo" if subscription <= 1 else "gpt-4",
+                model="gpt-3.5-turbo" if subscription <= 1 else "gpt-3.5-turbo", # gpt-4 daalna
                 messages=[
                     {"role": "system", "content": given_prompt},
                     *chatsToSend,
